@@ -1,0 +1,25 @@
+// main.scss
+// ---------------------------------------------------------------------------//
+
+/* 
+
+- Dumont Innovative Technologies Copyright 2017; 
+- Author(s): Robert Neal;  
+- Last Updated: Feberay 7, 2017; 
+
+*/
+
+
+//Iniatial Partials for documnet setup
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "tagPreset"; 
+
+//Core partials
+@import "generalClasses";
+@import "base";
+@import "headerNavigation"; 
+@import "breakpoints"; 
+
+

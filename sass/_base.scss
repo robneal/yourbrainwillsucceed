@@ -1,5 +1,77 @@
+// _base.scss
+// ---------------------------------------------------------------------------//
+
 body {
-  background: lighten($beige, 10%);
-  font-family: $bodyFont;
-  font-size: 1.1em;
+ 	background-color:white;
+  	font-family: $mainFont;
+  	font-size: 1.1em;
+  	line-height: 1.6;
+	color: $ltBlack;
 }
+
+.containerWrapper{
+	padding: 60px 0px; 
+
+	.container{
+		margin: 0 auto; 
+		padding: 0px 2em; 
+		//border: solid 1px $ltBlack; 
+	}
+}
+
+
+#visualLead{// Container Wrapper
+	background-color: $offWhite;
+	background: url(../img/road.jpg) no-repeat 50% center fixed;
+    background-size: cover;
+    min-height: 500px;
+    color:white;
+    position:relative;
+    .container{
+    	// position:absolute;
+    	// top:50%;
+    	// left:50%;
+    	// transform:translate(-50%,-50%); 
+	    h2{
+	    	text-align:center;
+	    	font-size: 2.3em; 
+	    	padding: 10px;  
+	    }
+	    p{
+	    	text-align:center;
+	    	margin: 10px auto; 
+	    }
+	}
+}
+#ourTeam{
+	background-color: $offWhite;
+	.container{
+
+	}
+}
+#contactUs{
+	background-color: white;
+	.container{
+
+	}
+}
+
+
+
+
+.stickyFooter{
+	min-height: calc(100vh - 101px);
+}
+footer{
+	background-color:$dumontDkBlue; 
+	color:white; 
+	text-align: center;
+	padding: 2em 0;
+	a{
+		color:white;
+	}
+	a:hover{
+		color:dumontYellow; 
+	}
+}
+

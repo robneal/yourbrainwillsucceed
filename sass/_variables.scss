@@ -2,18 +2,22 @@
 
 // ---------------------------------------------------------------------------//
 
-@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
+@import "https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700";
+$mainFont : 'Roboto', sans-serif;
 
-$beige         : #E3C691;
-$darkGreenGold : #8D8862;
-$lightGreen    : #C0DC99;
-$green         : #507356;
-$lightBlue     : #97D5D9;
-$desatBlue     : #464B65;
-$purple        : #3E2B3D;
-$darkPurple    : #3A3248;
-$pink          : #CC8E94;
-$skin          : #B08B7B;
 
-$headFont : 'Patua One', sans-serif;
-$bodyFont : 'Inika', serif;
+//Dumont Color Scheme  
+$dumontLtBlue		:#4cccd5; 
+$dumontYellow		:#f1e139;
+$offWhite			:#dee2dd;
+$dumontDkBlue		:#1f3039;
+$dumontDKBlueFaded	:rgba(31, 48, 57, 0.95);
+
+//Usefule Colors
+$ltBlack		:#3a3a3a;
+
+
+
+
+//Length Variables 
+$footerHeightPx	: 101px

@@ -1,0 +1,73 @@
+// _headerNavigation.scss
+// ---------------------------------------------------------------------------//
+
+header{
+	background-color:$dumontDKBlueFaded;
+	color:white; 
+	padding:25px 0;
+	position: static;
+	top:0;
+	width:100%; 
+	z-index: 1000;  
+
+	nav{
+		.logo{
+			a{
+				text-decoration: none;
+				
+				img{
+					max-height: 100px; 
+					max-width: 100px; 
+					display: block;
+    				margin: 0 auto;
+				}
+				h1{
+					color:white;
+					font-size:1.1em;
+					text-decoration:none;
+					text-align: center;
+					font-style: italic;
+					
+					&:hover{
+						color:$dumontYellow; 
+					}
+				}
+				&:hover{
+					color:$dumontYellow; 
+				}
+			}
+		}
+
+		.mainMenu{
+			text-align:center;
+			li{
+				a{
+					color:white; 
+					text-decoration: none;
+					padding:10px 20px; 
+					text-transform: uppercase;
+					display:block;
+
+					&:hover{
+						// color:$dumontYellow; 
+						// background-color: $dumontLtBlue;
+						// border: solid 1px white; 
+						color:$dumontLtBlue; 
+					}
+				}
+			}
+
+		}
+
+	}
+
+	.openHBMenu, .closeHbmX{
+	    max-height: 30px;
+    	max-width: 30px;
+	    position: absolute;
+	    top: 30px;
+	    right: 25px;
+	}
+}
+
+
