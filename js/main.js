@@ -17,15 +17,15 @@ $(document).ready(function(){
 	
 
 	function showHamMenu(width){
+		
+		// 	Declare variables 
+		var $mainMenu = 	$(".mainMenu");
+		var $visualLead = 	$("#visualLead");
+		var $headerNav = 	$('header');
+		var $openHBMenu = 	$(".openHBMenu"); 
+		var $closeHbmX = 	$(".closeHbmX"); 
+
 		if(width < 580){
-			// 	Declare variables 
-			var $mainMenu = 	$(".mainMenu");
-			var $visualLead = 	$("#visualLead");
-			var $headerNav = 	$('header');
-			var $openHBMenu = 	$(".openHBMenu"); 
-			var $closeHbmX = 	$(".closeHbmX"); 
-
-
 			// 	Steup hamburger menu if js enabled
 			$mainMenu.toggleClass( "hideMe" ); // hide mainMenu elements
 			$openHBMenu.toggleClass( "hideMe" ); // show hb menu
@@ -34,7 +34,7 @@ $(document).ready(function(){
 			$headerNav.css({
 				'position' : 'fixed'
 			});
-			$visualLead.css('margin-top', '125px');		
+			$visualLead.css('margin-top', '95px');		
 
 
 			// Toggle HB Menu when clicked
@@ -52,16 +52,9 @@ $(document).ready(function(){
 				$mainMenu.toggleClass( "hideMe" );
 				$openHBMenu.toggleClass( "hideMe" );
 			}); 
+		
 		}else{
 			
-			var $mainMenu = 	$(".mainMenu");
-			var $visualLead = 	$("#visualLead");
-			var $headerNav = 	$('header');
-			var $openHBMenu = 	$(".openHBMenu"); 
-			var $closeHbmX = 	$(".closeHbmX"); 
-
-
-			// 	
 			$mainMenu.removeClass( "hideMe" ); // show mainMenu elements
 			$openHBMenu.addClass( "hideMe" ); // hide hb menu
 			$closeHbmX.addClass("hideMe"); // hide hb x Menu

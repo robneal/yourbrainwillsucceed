@@ -46,7 +46,38 @@ body {
 #ourTeam{
 	background-color: $offWhite;
 	.container{
+		h2{
+			text-align: center;
+    		font-size: 3em;
+    		padding: 10px;
+		}
 
+		.teamImages{
+			display:flex; 
+			flex-direction:column; 
+			justify-content: space-between; 
+			
+			figure{
+				//flex-basis:auto; 
+				padding: 20px 0;
+
+				img{
+					border-radius: 100%;
+					display:block;
+					margin:0 auto; 
+				}
+				h4{
+					text-align:center; 
+				}
+				.teamMemberTitle{
+					font-weight:lighter;
+					text-align: center; 
+				}
+				.teamMemberDescription{
+					text-align: center; 
+				}
+			}	
+		}
 	}
 }
 #contactUs{

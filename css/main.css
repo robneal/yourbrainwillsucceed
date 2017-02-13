@@ -2,7 +2,7 @@
 
 - Dumont Innovative Technologies Copyright 2017; 
 - Author(s): Robert Neal;  
-- Last Updated: Feberay 7, 2017; 
+- Last Updated: February 7, 2017; 
 
 */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -472,6 +472,27 @@ body {
 
 #ourTeam {
   background-color: #dee2dd; }
+  #ourTeam .container h2 {
+    text-align: center;
+    font-size: 3em;
+    padding: 10px; }
+  #ourTeam .container .teamImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    #ourTeam .container .teamImages figure {
+      padding: 20px 0; }
+      #ourTeam .container .teamImages figure img {
+        border-radius: 100%;
+        display: block;
+        margin: 0 auto; }
+      #ourTeam .container .teamImages figure h4 {
+        text-align: center; }
+      #ourTeam .container .teamImages figure .teamMemberTitle {
+        font-weight: lighter;
+        text-align: center; }
+      #ourTeam .container .teamImages figure .teamMemberDescription {
+        text-align: center; }
 
 #contactUs {
   background-color: white; }
@@ -492,7 +513,7 @@ footer {
 header {
   background-color: rgba(31, 48, 57, 0.95);
   color: white;
-  padding: 25px 0;
+  padding: 10px 0;
   position: static;
   top: 0;
   width: 100%;
@@ -543,7 +564,7 @@ header {
         margin-top: 10px; }
 
   #visualLead {
-    margin-top: 180px; } }
+    margin-top: 150px; } }
 @media (min-width: 960px) {
   header {
     position: fixed; }
@@ -556,7 +577,7 @@ header {
         margin-top: 10px; }
 
   #visualLead {
-    margin-top: 125px; }
+    margin-top: 95px; }
 
   .container {
     width: 90%;
