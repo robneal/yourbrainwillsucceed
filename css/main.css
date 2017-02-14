@@ -478,21 +478,28 @@ body {
     padding: 10px; }
   #ourTeam .container .teamImages {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
     #ourTeam .container .teamImages figure {
-      padding: 20px 0; }
+      padding: 20px 0;
+      margin: 10px 15px; }
       #ourTeam .container .teamImages figure img {
         border-radius: 100%;
         display: block;
-        margin: 0 auto; }
+        margin: 0 auto;
+        max-width: 250px;
+        max-height: 250px; }
       #ourTeam .container .teamImages figure h4 {
         text-align: center; }
       #ourTeam .container .teamImages figure .teamMemberTitle {
         font-weight: lighter;
         text-align: center; }
       #ourTeam .container .teamImages figure .teamMemberDescription {
-        text-align: center; }
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 10px; }
 
 #contactUs {
   background-color: white; }
@@ -513,7 +520,7 @@ footer {
 header {
   background-color: rgba(31, 48, 57, 0.95);
   color: white;
-  padding: 10px 0;
+  padding: 5px 0;
   position: static;
   top: 0;
   width: 100%;
@@ -521,13 +528,13 @@ header {
   header nav .logo a {
     text-decoration: none; }
     header nav .logo a img {
-      max-height: 100px;
-      max-width: 100px;
+      max-height: 60px;
+      max-width: 60px;
       display: block;
       margin: 0 auto; }
     header nav .logo a h1 {
       color: white;
-      font-size: 1.1em;
+      font-size: 0.8em;
       text-decoration: none;
       text-align: center;
       font-style: italic; }
