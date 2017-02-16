@@ -4,7 +4,7 @@
 header{
 	background-color:$dumontDKBlueFaded;
 	color:white; 
-	padding:5px 0;
+	padding: 0;
 	position: static;
 	top:0;
 	width:100%; 
@@ -19,7 +19,7 @@ header{
 					max-height: 60px; 
 					max-width: 60px; 
 					display: block;
-    				margin: 0 auto;
+    				margin: 10px auto 0 auto;
 				}
 				h1{
 					color:white;
@@ -29,11 +29,11 @@ header{
 					font-style: italic;
 					
 					&:hover{
-						color:$dumontYellow; 
+						color:$dumontLtBlue; 
 					}
 				}
 				&:hover{
-					color:$dumontYellow; 
+					color:$dumontLtBlue; 
 				}
 			}
 		}
@@ -49,9 +49,6 @@ header{
 					display:block;
 
 					&:hover{
-						// color:$dumontYellow; 
-						// background-color: $dumontLtBlue;
-						// border: solid 1px white; 
 						color:$dumontLtBlue; 
 					}
 				}
@@ -65,7 +62,7 @@ header{
 	    max-height: 30px;
     	max-width: 30px;
 	    position: absolute;
-	    top: 30px;
+	    top: 20px;
 	    right: 25px;
 	}
 }

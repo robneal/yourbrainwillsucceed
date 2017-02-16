@@ -34,7 +34,7 @@ $(document).ready(function(){
 			$headerNav.css({
 				'position' : 'fixed'
 			});
-			$visualLead.css('margin-top', '95px');		
+			$visualLead.css('margin-top', '60px');		
 
 
 			// Toggle HB Menu when clicked

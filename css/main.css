@@ -459,50 +459,59 @@ body {
   background-color: #dee2dd;
   background: url(../img/road.jpg) no-repeat 50% center fixed;
   background-size: cover;
-  min-height: 500px;
+  min-height: 530px;
   color: white;
   position: relative; }
-  #visualLead .container h2 {
-    text-align: center;
-    font-size: 2.3em;
-    padding: 10px; }
-  #visualLead .container p {
-    text-align: center;
-    margin: 10px auto; }
+  #visualLead .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #visualLead .container h2 {
+      text-align: center;
+      font-size: 2.3em;
+      padding: 10px; }
+    #visualLead .container p {
+      text-align: center;
+      margin: 10px auto; }
 
-#ourTeam {
+#team {
   background-color: #dee2dd; }
-  #ourTeam .container h2 {
+  #team .container h2 {
     text-align: center;
     font-size: 3em;
-    padding: 10px; }
-  #ourTeam .container .teamImages {
+    padding: 0 0 30px 0; }
+  #team .container .teamImages {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center; }
-    #ourTeam .container .teamImages figure {
+    #team .container .teamImages figure {
       padding: 20px 0;
       margin: 10px 15px; }
-      #ourTeam .container .teamImages figure img {
+      #team .container .teamImages figure img {
         border-radius: 100%;
         display: block;
         margin: 0 auto;
         max-width: 250px;
         max-height: 250px; }
-      #ourTeam .container .teamImages figure h4 {
+      #team .container .teamImages figure h4 {
         text-align: center; }
-      #ourTeam .container .teamImages figure .teamMemberTitle {
+      #team .container .teamImages figure .teamMemberTitle {
         font-weight: lighter;
         text-align: center; }
-      #ourTeam .container .teamImages figure .teamMemberDescription {
+      #team .container .teamImages figure .teamMemberDescription {
         text-align: center;
         max-width: 300px;
         margin: 0 auto;
         padding: 10px; }
 
-#contactUs {
+#contact {
   background-color: white; }
+  #contact .container h2 {
+    text-align: center;
+    font-size: 3em;
+    padding: 0 0 30px 0; }
 
 .stickyFooter {
   min-height: calc(100vh - 101px); }
@@ -518,9 +527,9 @@ footer {
     color: dumontYellow; }
 
 header {
-  background-color: rgba(31, 48, 57, 0.95);
+  background-color: #1f3039;
   color: white;
-  padding: 5px 0;
+  padding: 0;
   position: static;
   top: 0;
   width: 100%;
@@ -531,7 +540,7 @@ header {
       max-height: 60px;
       max-width: 60px;
       display: block;
-      margin: 0 auto; }
+      margin: 10px auto 0 auto; }
     header nav .logo a h1 {
       color: white;
       font-size: 0.8em;
@@ -539,9 +548,9 @@ header {
       text-align: center;
       font-style: italic; }
       header nav .logo a h1:hover {
-        color: #f1e139; }
+        color: #4cccd5; }
     header nav .logo a:hover {
-      color: #f1e139; }
+      color: #4cccd5; }
   header nav .mainMenu {
     text-align: center; }
     header nav .mainMenu li a {
@@ -556,7 +565,7 @@ header {
     max-height: 30px;
     max-width: 30px;
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 25px; }
 
 @media (min-width: 580px) and (max-width: 959px) {
@@ -571,7 +580,7 @@ header {
         margin-top: 10px; }
 
   #visualLead {
-    margin-top: 150px; } }
+    margin-top: 115px; } }
 @media (min-width: 960px) {
   header {
     position: fixed; }
@@ -582,9 +591,14 @@ header {
       header nav .mainMenu {
         display: flex;
         margin-top: 10px; }
+        header nav .mainMenu li a {
+          border-bottom: solid 5px #1f3039; }
+          header nav .mainMenu li a:hover {
+            color: white;
+            border-bottom: solid 5px #4cccd5; }
 
   #visualLead {
-    margin-top: 95px; }
+    margin-top: 60px; }
 
   .container {
     width: 90%;

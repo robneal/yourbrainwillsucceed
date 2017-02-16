@@ -21,7 +21,7 @@
 		}
 	}
 	#visualLead{
-		margin-top: 150px;
+		margin-top: 115px;
 	}
 	
 
@@ -43,15 +43,20 @@
 				display: flex;
 				margin-top:10px; 
 				
-				li:last-child a{
-					//border-left: solid 3px white; 
-					//padding-left: 15px; 
+				li{
+					a{
+						border-bottom: solid 5px $dumontDKBlueFaded;
+						&:hover{
+							color:white; 
+							border-bottom: solid 5px #4cccd5;
+						}
+					}
 				}
 			}
 		}
 	}
 	#visualLead{
-		margin-top: 95px;
+		margin-top: 60px;
 	}
 	.container{
 	    width: 90%;
