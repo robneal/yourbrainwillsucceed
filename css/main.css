@@ -497,13 +497,19 @@ body {
     justify-content: center; }
     #team .container .teamImages figure {
       padding: 20px 0;
-      margin: 10px 15px; }
+      margin: 10px 15px;
+      position: relative;
+      overflow: hidden; }
+      #team .container .teamImages figure:hover .teamMemberQuote {
+        display: unset; }
       #team .container .teamImages figure img {
         border-radius: 100%;
         display: block;
         margin: 0 auto;
         max-width: 200px;
-        max-height: 200px; }
+        max-height: 200px;
+        min-width: 200px;
+        min-height: 200px; }
       #team .container .teamImages figure h4 {
         text-align: center; }
       #team .container .teamImages figure .teamMemberTitle {
@@ -514,6 +520,25 @@ body {
         max-width: 300px;
         margin: 0 auto;
         padding: 10px; }
+      #team .container .teamImages figure .teamMemberQuote {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        font-size: 0.8em;
+        padding-top: 30px;
+        padding: 55px 20px;
+        position: absolute;
+        top: 20px;
+        background-color: rgba(30, 47, 56, 0.75);
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        display: none; }
+  #team .container h3 {
+    text-align: center;
+    font-size: 1.6em;
+    padding: 0 0 30px 0;
+    font-weight: normal; }
 
 #contact {
   background-color: white; }
@@ -565,10 +590,10 @@ body {
           #contact .container form .formGroupInfo input, #contact .container form .formGroupInfo textarea, #contact .container form .formGroupComment input, #contact .container form .formGroupComment textarea {
             height: 64px; } }
       #contact .container form .formGroupInfo textarea, #contact .container form .formGroupComment textarea {
-        height: 150px; }
+        height: 195px; }
         @media screen and (min-width: 960px) {
           #contact .container form .formGroupInfo textarea, #contact .container form .formGroupComment textarea {
-            height: 180px; } }
+            height: 290px; } }
       #contact .container form .formGroupInfo button, #contact .container form .formGroupComment button {
         text-transform: uppercase;
         font-weight: 600;
@@ -583,13 +608,46 @@ body {
         margin: 0px auto;
         width: 100%; }
         #contact .container form .formGroupInfo button:hover, #contact .container form .formGroupComment button:hover {
-          color: #4cccd5;
+          color: #1f3039;
           background: white;
           border: solid 3px #1f3039; }
         @media screen and (min-width: 760px) {
           #contact .container form .formGroupInfo button, #contact .container form .formGroupComment button {
             width: 60%;
             margin: 0px 0 0 auto; } }
+  #contact .container .directions {
+    margin: 20px 0; }
+    @media screen and (min-width: 560px) {
+      #contact .container .directions {
+        display: flex;
+        justify-content: center; } }
+    #contact .container .directions .address {
+      margin: 20px 0; }
+      @media screen and (min-width: 560px) {
+        #contact .container .directions .address {
+          flex-basis: 40%; } }
+      @media screen and (min-width: 860px) {
+        #contact .container .directions .address {
+          font-size: 1.7em; } }
+      #contact .container .directions .address h4 {
+        font-size: 1.5em;
+        font-weight: initial;
+        text-align: center;
+        margin: 10px 0; }
+      #contact .container .directions .address p {
+        text-align: center;
+        font-size: 0.8em; }
+      #contact .container .directions .address .miniSeperator {
+        width: 15px;
+        margin: 10px auto;
+        border: 0;
+        border-top: solid 2px #8a8a8a; }
+    #contact .container .directions iframe {
+      width: 100%;
+      min-height: 320px; }
+      @media screen and (min-width: 560px) {
+        #contact .container .directions iframe {
+          flex-basis: 50%; } }
 
 .stickyFooter {
   min-height: calc(100vh - 101px); }

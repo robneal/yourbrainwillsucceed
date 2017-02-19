@@ -75,6 +75,13 @@ body {
 				padding: 20px 0;
 				//border: solid 1px $ltBlack;
 				margin: 10px 15px;
+				position: relative;
+    			overflow: hidden;
+    			&:hover{
+    				.teamMemberQuote{
+    					display: unset;
+    				}
+    			}
 
 				img{
 					border-radius: 100%;
@@ -82,7 +89,15 @@ body {
 					margin:0 auto; 
 					max-width: 200px;
 					max-height: 200px; 
+					min-width:200px;
+					min-height:200px;
+					// &:hover{
+    	// 				.teamMemberQuote{
+    	// 					display: unset;
+    	// 				}
+    	// 			}
 				}
+
 				h4{
 					text-align:center; 
 				}
@@ -96,7 +111,29 @@ body {
 					margin: 0 auto; 
 					padding: 10px; 
 				}
+				.teamMemberQuote{
+					width: 200px;
+				    height: 200px;
+				    border-radius: 100%;
+				    //border: solid 1px #f6ede2;
+				    font-size: 0.8em;
+				    padding-top: 30px;
+				    padding: 55px 20px;
+				    position: absolute;
+				    top: 20px;
+				    background-color: hsla(201, 30%, 17%, 0.75);
+				    text-align: center;
+				    color: white;
+				    font-weight: bold;
+				    display:none;
+				}
 			}	
+		}
+		h3{
+			text-align: center;
+		    font-size: 1.6em;
+		    padding: 0 0 30px 0;
+		    font-weight: normal;
 		}
 	}
 }
@@ -166,9 +203,9 @@ body {
 				    }
 			    }
 			    textarea{
-			    	height:150px; 
+			    	height:195px; 
 			    	@media screen and (min-width: 960px){
-				    	height: 180px; 
+				    	height: 290px; 
 				    }
 			    }
 			    button{
@@ -185,7 +222,7 @@ body {
 				    margin: 0px auto;
 				    width: 100%;
 					&:hover{
-						color: $dumontLtBlue; 
+						color: $dumontDkBlue; 
 						background:white;
 						border: solid 3px $dumontDkBlue;
 					}
@@ -196,6 +233,45 @@ body {
 			    }
 		    }
 		    
+		}
+		.directions{
+			margin: 20px 0; 
+			@media screen and (min-width: 560px) {
+		    	display: flex;
+			    justify-content: center;
+		    }
+			.address{
+				@media screen and (min-width: 560px) {
+					flex-basis: 40%; 
+		    	}
+				@media screen and (min-width: 860px) {
+					font-size:1.7em; 
+		    	}		    	
+				margin:20px 0; 
+				h4{
+					font-size: 1.5em;
+				    font-weight: initial;
+				    text-align: center;
+				    margin: 10px 0;
+				}
+				p{
+					text-align: center;
+    				font-size: 0.8em;
+				}
+				.miniSeperator{
+					width: 15px;
+    				margin: 10px auto;
+    				border: 0;
+    				border-top: solid 2px #8a8a8a;
+				}
+			}
+			iframe{
+				@media screen and (min-width: 560px) {
+					flex-basis: 50%; 
+		    	}
+				width:100%; 
+				min-height:320px;
+			}
 		}
 	}
 }
