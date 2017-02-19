@@ -10,7 +10,7 @@ body {
 }
 
 .containerWrapper{
-	padding: 60px 0px; 
+	padding: 90px 0px; 
 
 	.container{
 		margin: 0 auto; 
@@ -44,12 +44,23 @@ body {
 	}
 }
 #team{
-	background-color: $offWhite;
+	background-color: $dumontDkBlue;
+	color:white; 
 	.container{
 		h2{
 			text-align: center;
-    		font-size: 3em;
-    		padding: 0 0 30px 0;
+    		font-size: 2.5em;
+    		padding: 0;
+		}
+		.shortSeperator{
+			width: 90px;
+		    margin: 15px auto 30px auto;
+		    border: solid 3px white;
+		}
+		p{
+			text-align: center; 
+			font-weight: lighter;
+			margin-bottom:20px; 
 		}
 
 		.teamImages{
@@ -69,8 +80,8 @@ body {
 					border-radius: 100%;
 					display:block;
 					margin:0 auto; 
-					max-width: 250px;
-					max-height: 250px; 
+					max-width: 200px;
+					max-height: 200px; 
 				}
 				h4{
 					text-align:center; 
@@ -92,10 +103,99 @@ body {
 #contact{
 	background-color: white;
 	.container{
+		
 		h2{
+			font-size: 2.5em;
 			text-align: center;
-    		font-size: 3em;
+    		padding: 0 0 0px 0;
+		}
+		.shortSeperator{
+			width: 90px;
+		    margin: 15px auto 30px auto;
+		    border: solid 3px black;
+		}
+		.thinSeperator{
+			border: 0;
+    		border-top: 1px solid #eeeeee;
+    		margin: 30px auto; 
+		}
+		h3{
+			text-align: center;
+    		font-size: 1.6em;
     		padding: 0 0 30px 0;
+    		font-weight: normal;
+		}
+
+		p{
+			text-align: center; 
+			font-weight: lighter;
+		}
+
+		form{
+			margin-top: 10px;
+		    //background: rgba(128, 128, 128, 0.09);
+		    //border:solid 1px black; 
+		    padding: 30px 0;
+		    @media screen and (min-width: 760px) {
+		    	display: flex;
+			    justify-content: center;
+		    }
+		    .formGroupInfo, .formGroupComment{
+		    
+		    	width:100%;
+		    	@media screen and (min-width: 760px) {
+		    		padding: 0 30px; 
+		    	}
+		    
+		    	label{
+		    		display: block;
+    				margin: 0 0 5px 0;
+		    	}
+			    input,textarea{
+			    	height: 32px;
+			    	display: block;
+				    width: 100%;
+				    margin: 0 0 15px 0;
+				    background: #fafafa;
+				    border: solid 1px #e9e9e9;
+				    padding: 5px 10px;
+				    color: #848484;
+				    
+				    @media screen and (min-width: 960px){
+				    	height: 64px; 
+				    }
+			    }
+			    textarea{
+			    	height:150px; 
+			    	@media screen and (min-width: 960px){
+				    	height: 180px; 
+				    }
+			    }
+			    button{
+			    	text-transform: uppercase;
+			    	font-weight: 600;
+			    	padding: 12px 42px; 
+			    	border: solid 3px $dumontDkBlue;
+			    	background: $dumontDkBlue;
+			    	color:white; 
+			    	min-width:140px;
+			    	text-align: center;
+			    	border-radius: 3px; 
+			    	display: block;
+				    margin: 0px auto;
+				    width: 100%;
+					&:hover{
+						color: $dumontLtBlue; 
+						background:white;
+						border: solid 3px $dumontDkBlue;
+					}
+					@media screen and (min-width:760px ){
+						width:60%;
+					    margin: 0px 0 0 auto;
+					}
+			    }
+		    }
+		    
 		}
 	}
 }
@@ -111,11 +211,19 @@ footer{
 	color:white; 
 	text-align: center;
 	padding: 2em 0;
+	font-size:0.7em; 
 	a{
 		color:white;
-	}
-	a:hover{
-		color:dumontYellow; 
+		text-decoration:none;
+		img{
+			vertical-align: text-top;
+		    width: 12px;
+		    height: 12px;
+		    margin-left: 0px;
+		}
+		&:hover{
+			color:$dumontLtBlue; 
+		}
 	}
 }
 
