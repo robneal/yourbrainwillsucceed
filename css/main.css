@@ -477,6 +477,9 @@ body {
       text-align: center;
       margin: 10px auto; }
 
+@media (min-width: 960px) {
+  #story .container {
+    width: 80%; } }
 #story .container h2 {
   font-size: 2.5em;
   text-align: center;
@@ -491,41 +494,61 @@ body {
   justify-content: center;
   font-size: 1.1em;
   text-transform: uppercase; }
-#story .container article {
+#story .container .thinSeperator {
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  margin: 30px auto; }
+@media (min-width: 960px) {
+  #story .container div {
+    display: flex;
+    flex-wrap: wrap; }
+    #story .container div:nth-of-type(odd) h3 {
+      text-align: left; } }
+#story .container div h3 {
+  font-size: 2em;
+  text-align: center; }
+  @media (min-width: 960px) {
+    #story .container div h3 {
+      flex-basis: 100%;
+      text-align: right;
+      font-size: 5.5em;
+      padding: 0px 5%; } }
+#story .container div article {
   padding: 10px;
   margin: 10px 0;
   text-align: center; }
-  #story .container article h3 {
-    font-size: 2em;
-    text-align: center; }
-  #story .container article h5 {
+  @media (min-width: 960px) {
+    #story .container div article {
+      width: 50%; } }
+  #story .container div article h5 {
     text-align: center;
     font-size: 0.9em;
     text-transform: uppercase;
     margin: 10px auto 5px auto; }
-  #story .container article p {
+  #story .container div article p {
     text-align: center;
-    font-weight: lighter;
     font-size: 0.8em;
     padding: 0 20px;
     color: #848484; }
-  #story .container article button {
-    padding: 10px 45px;
-    border: solid 3px #1f3039;
-    background: #1f3039;
-    color: white;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
-    margin: 25px auto 10px auto;
-    transition: color , background 0.6s; }
-    #story .container article button:hover {
-      color: #1f3039;
-      background: white; }
+#story .container button {
+  padding: 10px 45px;
+  border: solid 3px #1f3039;
+  background: #1f3039;
+  color: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  margin: 25px auto 10px auto;
+  transition: color , background 0.6s; }
+  #story .container button:hover {
+    color: #1f3039;
+    background: white; }
 
 #team {
   background-color: #1f3039;
-  color: white; }
+  color: white;
+  background: url(../img/road2.jpg) no-repeat 50% center fixed;
+  background-size: cover; }
   #team .container h2 {
     text-align: center;
     font-size: 2.5em;
@@ -536,7 +559,7 @@ body {
     border: solid 3px white; }
   #team .container p {
     text-align: center;
-    font-weight: lighter;
+    font-weight: bold;
     margin-bottom: 20px; }
   #team .container .teamImages {
     display: flex;
