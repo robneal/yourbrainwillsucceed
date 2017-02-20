@@ -457,23 +457,71 @@ body {
 
 #visualLead {
   background-color: #dee2dd;
-  background: url(../img/road.jpg) no-repeat 50% center fixed;
+  background: url(../img/road2.jpg) no-repeat 50% center fixed;
   background-size: cover;
   min-height: 530px;
+  height: calc(85vh);
   color: white;
   position: relative; }
   #visualLead .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    padding: 0; }
     #visualLead .container h2 {
       text-align: center;
-      font-size: 2.3em;
-      padding: 10px; }
+      font-size: 2em;
+      padding: 0px; }
     #visualLead .container p {
       text-align: center;
       margin: 10px auto; }
+
+#story .container h2 {
+  font-size: 2.5em;
+  text-align: center;
+  padding: 0 0 0px 0; }
+#story .container .shortSeperator {
+  width: 90px;
+  margin: 15px auto 30px auto;
+  border: solid 3px black; }
+#story .container .introText {
+  text-align: center;
+  font-weight: lighter;
+  justify-content: center;
+  font-size: 1.1em;
+  text-transform: uppercase; }
+#story .container article {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center; }
+  #story .container article h3 {
+    font-size: 2em;
+    text-align: center; }
+  #story .container article h5 {
+    text-align: center;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin: 10px auto 5px auto; }
+  #story .container article p {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.8em;
+    padding: 0 20px;
+    color: #848484; }
+  #story .container article button {
+    padding: 10px 45px;
+    border: solid 3px #1f3039;
+    background: #1f3039;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    margin: 25px auto 10px auto;
+    transition: color , background 0.6s; }
+    #story .container article button:hover {
+      color: #1f3039;
+      background: white; }
 
 #team {
   background-color: #1f3039;
@@ -501,7 +549,7 @@ body {
       position: relative;
       overflow: hidden; }
       #team .container .teamImages figure:hover .teamMemberQuote {
-        display: unset; }
+        opacity: 1; }
       #team .container .teamImages figure img {
         border-radius: 100%;
         display: block;
@@ -529,11 +577,12 @@ body {
         padding: 55px 20px;
         position: absolute;
         top: 20px;
-        background-color: rgba(30, 47, 56, 0.75);
+        background-color: rgba(30, 47, 56, 0.8);
         text-align: center;
         color: white;
         font-weight: bold;
-        display: none; }
+        opacity: 0;
+        transition: opacity 0.75s; }
   #team .container h3 {
     text-align: center;
     font-size: 1.6em;
@@ -648,9 +697,6 @@ body {
       @media screen and (min-width: 560px) {
         #contact .container .directions iframe {
           flex-basis: 50%; } }
-
-.stickyFooter {
-  min-height: calc(100vh - 101px); }
 
 footer {
   background-color: #1f3039;
