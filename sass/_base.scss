@@ -7,6 +7,7 @@ body {
   	font-size: 1.1em;
   	line-height: 1.6;
 	color: $ltBlack;
+	//overflow: hidden;
 }
 
 .containerWrapper{
@@ -24,6 +25,7 @@ body {
 	// @media (min-width: 960px){
 	// 	//min-height: calc(100vh + 65px);
 	// }
+	overflow: hidden;
 }
 
 #visualLead{// Container Wrapper
@@ -31,9 +33,11 @@ body {
 	background: url(../img/road2.jpg) no-repeat 50% center fixed;
     background-size: cover;
     min-height: 530px;
-    height:calc(85vh); 
+    height:calc(100vh); 
     color:white;
     position:relative;
+   	transform-origin: center bottom;
+   	transition: transform 0s;  
     .container{
     	position:absolute;
     	top:50%;
@@ -47,7 +51,17 @@ body {
 	    }
 	    p{
 	    	text-align:center;
-	    	margin: 10px auto; 
+	    	margin: 0px auto; 
+	    }
+	    .downArrow{
+		    font-size: 2em;
+		    text-decoration: none;
+		    text-align: center;
+		    display: block;
+		    color: white;
+		    &:hover{
+		    	color:$dumontLtBlue;
+		    }
 	    }
 	}
 }
@@ -57,6 +71,7 @@ body {
 #story{
 	//border-top:solid 1px red; 
 	.container{
+		overflow: hidden;
 		@media (min-width: 960px){
 			width:80%; 
 		}
@@ -84,6 +99,16 @@ body {
     		margin: 30px auto; 
 		}
 		div{
+
+		    position: relative;
+		    opacity: 0;
+		    transform: translateX(30px);
+		    transition: all 0.7s ease-in-out;
+		    overflow: hidden;
+		    //cursor: pointer
+
+
+
 
 			@media (min-width: 960px){
 				display: flex;
@@ -124,9 +149,16 @@ body {
 					font-size:0.8em;
 					padding:0 20px; 
 					color:#848484; 
+					max-width: 320px; 
+					margin: 0 auto; 
 				}
 
 			}
+		}
+		.is-showing{
+      		opacity: 1; 
+      		transform: translateX(0px);
+      		overflow: hidden;
 		}
 		
 		button{
@@ -152,7 +184,8 @@ body {
 	background-color: $dumontDkBlue;
 	color:white; 
 	background: url(../img/road2.jpg) no-repeat 50% center fixed;
-    background-size: cover;
+    background-size: cover; 
+
 	.container{
 		h2{
 			text-align: center;

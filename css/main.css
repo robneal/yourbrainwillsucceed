@@ -442,6 +442,9 @@ a {
 .hideMe {
   display: none; }
 
+.typed-crusor {
+  display: none; }
+
 body {
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -455,14 +458,19 @@ body {
     margin: 0 auto;
     padding: 0px 2em; }
 
+.stickyFooter {
+  overflow: hidden; }
+
 #visualLead {
   background-color: #dee2dd;
   background: url(../img/road2.jpg) no-repeat 50% center fixed;
   background-size: cover;
   min-height: 530px;
-  height: calc(85vh);
+  height: calc(100vh);
   color: white;
-  position: relative; }
+  position: relative;
+  transform-origin: center bottom;
+  transition: transform 0s; }
   #visualLead .container {
     position: absolute;
     top: 50%;
@@ -475,74 +483,96 @@ body {
       padding: 0px; }
     #visualLead .container p {
       text-align: center;
-      margin: 10px auto; }
+      margin: 0px auto; }
+    #visualLead .container .downArrow {
+      font-size: 2em;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      color: white; }
+      #visualLead .container .downArrow:hover {
+        color: #4cccd5; }
 
-@media (min-width: 960px) {
-  #story .container {
-    width: 80%; } }
-#story .container h2 {
-  font-size: 2.5em;
-  text-align: center;
-  padding: 0 0 0px 0; }
-#story .container .shortSeperator {
-  width: 90px;
-  margin: 15px auto 30px auto;
-  border: solid 3px black; }
-#story .container .introText {
-  text-align: center;
-  font-weight: lighter;
-  justify-content: center;
-  font-size: 1.1em;
-  text-transform: uppercase; }
-#story .container .thinSeperator {
-  border: 0;
-  border-top: 1px solid #eeeeee;
-  margin: 30px auto; }
-@media (min-width: 960px) {
+#story .container {
+  overflow: hidden; }
+  @media (min-width: 960px) {
+    #story .container {
+      width: 80%; } }
+  #story .container h2 {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 0 0 0px 0; }
+  #story .container .shortSeperator {
+    width: 90px;
+    margin: 15px auto 30px auto;
+    border: solid 3px black; }
+  #story .container .introText {
+    text-align: center;
+    font-weight: lighter;
+    justify-content: center;
+    font-size: 1.1em;
+    text-transform: uppercase; }
+  #story .container .thinSeperator {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 30px auto; }
   #story .container div {
-    display: flex;
-    flex-wrap: wrap; }
-    #story .container div:nth-of-type(odd) h3 {
-      text-align: left; } }
-#story .container div h3 {
-  font-size: 2em;
-  text-align: center; }
-  @media (min-width: 960px) {
+    position: relative;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.7s ease-in-out;
+    overflow: hidden; }
+    @media (min-width: 960px) {
+      #story .container div {
+        display: flex;
+        flex-wrap: wrap; }
+        #story .container div:nth-of-type(odd) h3 {
+          text-align: left; } }
     #story .container div h3 {
-      flex-basis: 100%;
-      text-align: right;
-      font-size: 5.5em;
-      padding: 0px 5%; } }
-#story .container div article {
-  padding: 10px;
-  margin: 10px 0;
-  text-align: center; }
-  @media (min-width: 960px) {
+      font-size: 2em;
+      text-align: center; }
+      @media (min-width: 960px) {
+        #story .container div h3 {
+          flex-basis: 100%;
+          text-align: right;
+          font-size: 5.5em;
+          padding: 0px 5%; } }
     #story .container div article {
-      width: 50%; } }
-  #story .container div article h5 {
-    text-align: center;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    margin: 10px auto 5px auto; }
-  #story .container div article p {
-    text-align: center;
-    font-size: 0.8em;
-    padding: 0 20px;
-    color: #848484; }
-#story .container button {
-  padding: 10px 45px;
-  border: solid 3px #1f3039;
-  background: #1f3039;
-  color: white;
-  border-radius: 10px;
-  margin: 0 auto;
-  display: block;
-  margin: 25px auto 10px auto;
-  transition: color , background 0.6s; }
-  #story .container button:hover {
-    color: #1f3039;
-    background: white; }
+      padding: 10px;
+      margin: 10px 0;
+      text-align: center; }
+      @media (min-width: 960px) {
+        #story .container div article {
+          width: 50%; } }
+      #story .container div article h5 {
+        text-align: center;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        margin: 10px auto 5px auto; }
+      #story .container div article p {
+        text-align: center;
+        font-size: 0.8em;
+        padding: 0 20px;
+        color: #848484;
+        max-width: 320px;
+        margin: 0 auto; }
+  #story .container .is-showing {
+    opacity: 1;
+    transform: translateX(0px);
+    overflow: hidden; }
+  #story .container button {
+    padding: 10px 45px;
+    border: solid 3px #1f3039;
+    background: #1f3039;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    margin: 25px auto 10px auto;
+    transition: color , background 0.6s; }
+    #story .container button:hover {
+      color: #1f3039;
+      background: white; }
 
 #team {
   background-color: #1f3039;
