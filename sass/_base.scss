@@ -19,7 +19,7 @@ body {
 	padding: 0px 2em; 
 	//border: solid 1px $ltBlack; 
 	@media (min-width: 960px){
-		max-width: 1000px;
+		max-width: 1024px;
 		margin: 0 auto;
 		padding: 0px 2.5em;  
 	}
@@ -35,6 +35,8 @@ header{
 	width:100%; 
 	z-index: 1000;  
 	-webkit-margin-before-collapse: separate;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0 6px 10px;
+    box-shadow: rgba(0,0,0,0.08) 0 6px 10px; 
 
 	@media (min-width: 960px){
 		position: fixed; 
@@ -84,6 +86,7 @@ header{
 	    z-index: 10;
 	    background-size: contain;
 	    background-repeat: no-repeat;
+	    cursor: pointer;
 	    background-image: url(../img/icons/hamburgerMenuWhite.svg);
 	    @media (min-width: 960px){
 	    	display: none;
@@ -122,7 +125,7 @@ header{
 			    text-decoration: none;
 			    /* display: inline-block; */
 			    vertical-align: middle;
-			    line-height: 20px;
+			    line-height: 30px;
 			    margin: 6px 15px 0;
 				
 				img{
@@ -165,7 +168,7 @@ header{
 			    padding: 10px 0px;
 			    text-transform: uppercase;
 			    display: block;
-			    font-size: 13px;
+			    font-size: 14px;
 			    line-height: 18px;
 			    letter-spacing: 1.86px;
 
@@ -173,7 +176,7 @@ header{
 			    text-decoration: none;
 
 			    vertical-align: middle;
-			    line-height: 35px;
+			    line-height: 40px;
 			    margin: 6px 15px 0;
 
 
@@ -213,9 +216,13 @@ header{
    	transform-origin: center bottom;
    	transition: transform 0s;  
    	overflow: hidden;
+   	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
 
    	@media (min-width: 960px){
    		margin-top: 60px;
+   		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
    	}
 
     .container{
@@ -233,7 +240,7 @@ header{
 
 	    h2{
 	    	text-align:center;
-	    	font-size: 2em; 
+	    	font-size: 1.6em; 
 	    	padding: 0px;  
 	    }
 	    p{
@@ -371,6 +378,8 @@ header{
 	color:white; 
 	//background: url(../img/road2.jpg) no-repeat 50% center fixed;
     background-size: cover; 
+    -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+	clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 
 	.container{
 		h2{

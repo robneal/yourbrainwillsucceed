@@ -21,23 +21,23 @@ $(document).ready(function(){
 
 	
 	// Typed JS typing text in visualLead 
-    $(".typingText").typed({
-    	strings: ["Dumont Innovative Technologies can help.","The road to OCD recovery starts here!" ],
-        typeSpeed: 75,
+  //   $(".typingText").typed({
+  //   	strings: ["Dumont Innovative Technologies can help.","The road to OCD recovery starts here!" ],
+  //       typeSpeed: 75,
         
-        // time before typing starts
-		startDelay: 5000,
+  //       // time before typing starts
+		// startDelay: 5000,
 		
-		// backspacing speed
-		backSpeed: 75,
+		// // backspacing speed
+		// backSpeed: 75,
 
-		// time before backspacing
-		backDelay: 2000,
+		// // time before backspacing
+		// backDelay: 2000,
 		
-		// loop
-		loop: true
-      });
-    $('.typed-cursor').addClass('hideMe');
+		// // loop
+		// loop: true
+  //     });
+  //   $('.typed-cursor').addClass('hideMe');
 
 	
 	// Parallax Effect for when user scrolls page vertically 
@@ -51,16 +51,19 @@ $(document).ready(function(){
 		var $scaleBy = pixScrolled / 10100 +1 ;
 		var $storyContainer =$("#story .container"); 
 		// Debuging 
-		//console.log(pixScrolled); 
+		console.log(pixScrolled); 
 		//console.log("ScaleFactor: " + $scaleBy);
 		
 
 		// Visual Lead
-		$('#visualLead').css({transform: 'scale('+ $scaleBy +','+ $scaleBy+')'});
+		
+		// $('#visualLead').css({transform: 'scale('+ $scaleBy +','+ $scaleBy+')'}); // Scale leading image
+		
 		$visualText.css({
-			'transform' : 'translate(-50%, ' + (-50 + pixScrolled /2.5) + '%)'
+			'transform' : 'translate(-50%, ' + (-50 + pixScrolled /3.5) + '%)'
 		});
-		if(pixScrolled > 420){
+		
+		if(pixScrolled > 320){
 			$visualText.fadeOut(800);
 		}else{
 			$visualText.fadeIn(800);
@@ -69,10 +72,12 @@ $(document).ready(function(){
 
 		// Story Section - Hope Section fade In/Fade Out 
 		if(pixScrolled > $('#story').offset().top - 60 ){
+			$('.mainMenu a:first-child()').addClass('menuBottom');
 			console.log("hope"); 
 		    $('#story .container .hope').addClass('is-showing');
   		}else{
   			$('.hope').removeClass('is-showing');
+  			$('.mainMenu a:first-child()').removeClass('menuBottom');
   		}
 
   		// Story Section - Guidance Section ade In/Fade Out
@@ -90,6 +95,42 @@ $(document).ready(function(){
   		}else{
   			$('.community').removeClass('is-showing');
   		}
+
+  		var $homeLink = $('.mainMenu a:nth-child(1)');
+  		var $storyLink = $('.mainMenu a:nth-child(2)');
+  		var $teamLink = $('.mainMenu a:nth-child(3)');
+  		var $contactLink = $('.mainMenu a:nth-child(4)');
+  		
+  		if(pixScrolled  <= $('#story').offset().top - 60){
+			$storyLink.removeClass('menuBottom');
+			$teamLink.removeClass('menuBottom');
+			$contactLink.removeClass('menuBottom');
+
+			$homeLink.addClass('menuBottom');
+
+		}else if ((pixScrolled > $('#story').offset().top - 60) && (pixScrolled <= $('#team').offset().top - 60)){
+    		$homeLink.removeClass('menuBottom');
+    		$teamLink.removeClass('menuBottom');
+			$contactLink.removeClass('menuBottom');
+
+    		$storyLink.addClass('menuBottom');
+
+		}else if((pixScrolled > $('#team').offset().top - 60) && (pixScrolled <= $('#contact').offset().top - 60)){
+			$homeLink.removeClass('menuBottom');
+			$storyLink.removeClass('menuBottom');
+			$contactLink.removeClass('menuBottom');
+
+			$teamLink.addClass('menuBottom');
+
+		}else{
+			$homeLink.removeClass('menuBottom');
+			$storyLink.removeClass('menuBottom');
+			$teamLink.removeClass('menuBottom');
+
+			$contactLink.addClass('menuBottom');
+		}
+
+
 	});// window.scroll()
 
 	
