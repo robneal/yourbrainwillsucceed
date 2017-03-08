@@ -38,8 +38,7 @@ $(document).ready(function(){
 		// loop: true
   //     });
   //   $('.typed-cursor').addClass('hideMe');
-
-	
+  	$('#story .container div').addClass('fadeOut-right');
 	// Parallax Effect for when user scrolls page vertically 
     $(window).scroll(function(){
 		// Delare variables
@@ -51,7 +50,7 @@ $(document).ready(function(){
 		var $scaleBy = pixScrolled / 10100 +1 ;
 		var $storyContainer =$("#story .container"); 
 		// Debuging 
-		console.log(pixScrolled); 
+		//console.log(pixScrolled); 
 		//console.log("ScaleFactor: " + $scaleBy);
 		
 
@@ -72,29 +71,37 @@ $(document).ready(function(){
 
 		// Story Section - Hope Section fade In/Fade Out 
 		if(pixScrolled > $('#story').offset().top - 60 ){
-			$('.mainMenu a:first-child()').addClass('menuBottom');
-			console.log("hope"); 
-		    $('#story .container .hope').addClass('is-showing');
+			//console.log("hope"); 
+		    $('#story .container .hope').addClass('fadeIn-left');
   		}else{
-  			$('.hope').removeClass('is-showing');
-  			$('.mainMenu a:first-child()').removeClass('menuBottom');
+  			$('.hope').removeClass('fadeIn-left');
   		}
 
   		// Story Section - Guidance Section ade In/Fade Out
 		if(pixScrolled > $('.hope').offset().top - 60 ){ 
-			console.log("guidance"); 
-		    $('#story .container .guidance').addClass('is-showing');
+			//console.log("guidance"); 
+		    $('#story .container .guidance').addClass('fadeIn-left');
   		}else{
-  			$('.guidance').removeClass('is-showing');
+  			$('.guidance').removeClass('fadeIn-left');
   		}
 
   		// Story Section - Community Section fade In/Fade Out
   		if(pixScrolled > $('.guidance').offset().top - 60 ){
-			console.log("Community"); 
-		    $('#story .container .community').addClass('is-showing');
+			//console.log("Community"); 
+		    $('#story .container .community').addClass('fadeIn-left');
   		}else{
-  			$('.community').removeClass('is-showing');
+  			$('.community').removeClass('fadeIn-left');
   		}
+
+
+  		//	Main Menu Nav Links Styling
+  		
+  		var $mainMenuLinks = $('.mainMenu a');
+  		
+  		$mainMenuLinks.click( function(){
+  			console.log ('Clicked a'); 
+  			$('#hbMenu').prop('checked', false);
+  		}); 	
 
   		var $homeLink = $('.mainMenu a:nth-child(1)');
   		var $storyLink = $('.mainMenu a:nth-child(2)');

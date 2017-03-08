@@ -5,5 +5,19 @@
 }
 
 .menuBottom{
-	border-bottom: solid 5px #4cccd5 !important;
+	// border-bottom: none !important;
+
+	@media (min-width: 960px){
+		border-bottom: solid 5px #4cccd5 !important;
+	} 
+}
+.fadeOut-right{
+	opacity: 0;
+	transform: translateX(30px);
+	overflow: hidden;
+}
+.fadeIn-left{
+	opacity: 1; 
+	transform: translateX(0px);
+	overflow: hidden;
 }
