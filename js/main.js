@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	
-	console.log(" Javascript Enabled : Hello World! ");
+	console.log("js is (t)werking");
+
+	$('.nojs').hide(); 
 	// To solve my with problem I can add the class large at width 960px and run all my js on .large 
 	
 	// Smooth Scroolling on all local anchor links 

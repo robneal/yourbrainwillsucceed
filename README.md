@@ -10,4 +10,4 @@ Project Status : In Progress
 GitHub Pages Link - https://robneal.github.io/yourbrainwillsucceed/
 
 Known Issues/Bugs
-- 
+- visual Lead image stretched on mobile screen 
