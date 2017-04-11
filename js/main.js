@@ -21,6 +21,56 @@ $(document).ready(function(){
 	  });
 	});  
 
+
+	var end = new Date('06/28/2017 10:1 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = 
+        	'<li class="days countdownSection "><span id="dayCount" class="count">'
+        	+ days + '</span><span class="title">Days</span></li>';
+    
+        // document.querySelector('.countdown.days.count').innerHTML = days + 'days ';
+       
+        document.getElementById('countdown').innerHTML += 
+        	'<li class="hours countdownSection "><span id="hourCount" class="count">'
+        	+ hours + '</span><span class="title">Hours</span></li>';
+
+        
+        document.getElementById('countdown').innerHTML += 
+        	'<li class="minutes countdownSection "><span id="minsCount" class="count">'
+        	+ minutes + '</span><span class="title">Minutes</span></li>';
+
+        document.getElementById('countdown').innerHTML += 
+        	'<li class="seconds countdownSection "><span id="secsCount" class="count">'
+        	+ seconds + '</span><span class="title">Seconds</span></li>';
+
+    }
+
+    timer = setInterval(showRemaining, 1000);
+
+
+
+
 	
 	// Typed JS typing text in visualLead 
   //   $(".typingText").typed({
@@ -40,7 +90,7 @@ $(document).ready(function(){
 		// loop: true
   //     });
   //   $('.typed-cursor').addClass('hideMe');
-  	$('#story .container div').addClass('fadeOut-right');
+  	$('#story .container .fadeInSection').addClass('fadeOut-right');
 	// Parallax Effect for when user scrolls page vertically 
     $(window).scroll(function(){
 		// Delare variables
