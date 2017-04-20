@@ -98,7 +98,7 @@ $(document).ready(function(){
 		
 		var pixScrolled = $(this).scrollTop(); 
 
-		// var $visualText =$("#visualLead .container"); 
+		var $visualText = $("#visualLead .container"); 
 		var $scaleBy = pixScrolled / 10100 +1 ;
 		var $storyContainer =$("#story .container"); 
 		// Debuging 
@@ -110,15 +110,15 @@ $(document).ready(function(){
 		
 		// $('#visualLead').css({transform: 'scale('+ $scaleBy +','+ $scaleBy+')'}); // Scale leading image
 		
-		// $visualText.css({
-		// 	'transform' : 'translate(-50%, ' + (-50 + pixScrolled /3.5) + '%)'
-		// });
+		$visualText.css({
+			'transform' : 'translate(-50%, ' + (-50 + pixScrolled /3.5) + '%)'
+		});
 		
-		// if(pixScrolled > 320){
-		// 	$visualText.fadeOut(800);
-		// }else{
-		// 	$visualText.fadeIn(800);
-		// }
+		if(pixScrolled > 320){
+			$visualText.fadeOut(800);
+		}else{
+			$visualText.fadeIn(800);
+		}
 
 
 		// Story Section - Hope Section fade In/Fade Out 

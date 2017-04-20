@@ -14,7 +14,7 @@
  * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import "https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700";
+@import "https://fonts.googleapis.com/css?family=Roboto:100,300i,400,400i,700";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -617,11 +617,14 @@ header {
               border-bottom: none; } }
 
 #visualLead {
-  background-color: #dee2dd;
-  background: url(../img/road2.jpg) no-repeat 50% center fixed;
+  background-color: #1f3039;
+  background: url(../img/road2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100%;
-  min-height: calc(100vh);
+  min-height: 530px;
+  height: calc(100vh);
   color: white;
   position: relative;
   transform-origin: center bottom;
@@ -633,23 +636,16 @@ header {
     #visualLead {
       margin: 60px auto; } }
   #visualLead .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0;
-    width: 80%;
-    margin: 60px auto;
     text-align: center; }
     @media (min-width: 960px) {
       #visualLead .container {
         width: 90%;
-        margin: 0 auto;
-        width: 80%;
-        margin: 60px auto;
-        text-align: center; } }
-    #visualLead .container video {
-      width: 100%;
-      margin: 45px auto; }
-      @media (min-width: 800px) {
-        #visualLead .container video {
-          width: 70%; } }
+        margin: 0 auto; } }
     #visualLead .container h2 {
       text-align: center;
       font-size: 1.6em;
@@ -677,9 +673,12 @@ header {
     margin: 15px auto 30px auto;
     border: solid 3px black; }
   .story .container video, .bookStory .container video {
-    width: 70%;
+    width: 100%;
     display: block;
     margin: 45px auto; }
+    @media (min-width: 600px) {
+      .story .container video, .bookStory .container video {
+        width: 70%; } }
   .story .container .introText, .bookStory .container .introText {
     text-align: center;
     font-weight: lighter;
