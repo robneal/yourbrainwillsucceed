@@ -5,7 +5,7 @@ Author(s): Robert Neal
 Description: FrontEnd Project (Static Files Only) Developed for Dummont Innovative Technologies in association with Sha Digital marketing. 
 
 
-Project Status : In Progress
+Project Status : In Development
 
 GitHub Pages Link - https://robneal.github.io/yourbrainwillsucceed/
 
