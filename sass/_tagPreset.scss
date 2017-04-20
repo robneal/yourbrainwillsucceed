@@ -29,3 +29,6 @@ a { /* Used to ensure links are clickable on smaller devices */
 	min-width:48px;
 	min-height:48px;
 }
+button:focus, button:hover{
+	outline:none;
+}
