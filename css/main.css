@@ -1,10 +1,3 @@
-/* 
-
-- Dumont Innovative Technologies Copyright 2017; 
-- Author(s): Robert Neal;  
-- Last Updated: February 7, 2017; 
-
-*/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -451,6 +444,23 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased; }
 
+.hideMe {
+  display: none; }
+
+@media (min-width: 960px) {
+  .menuBottom {
+    border-bottom: solid 5px #4cccd5 !important; } }
+
+.fadeOut-right {
+  opacity: 0;
+  transform: translateX(30px);
+  overflow: hidden; }
+
+.fadeIn-left {
+  opacity: 1;
+  transform: translateX(0px);
+  overflow: hidden; }
+
 .containerWrapper {
   padding: 90px 0px; }
 
@@ -792,10 +802,16 @@ header {
     width: 90px;
     margin: 15px auto 30px auto;
     border: solid 3px white; }
-  #team .container p {
+  #team .container .teamDescription {
     text-align: center;
     font-weight: lighter;
     margin-bottom: 20px; }
+    #team .container .teamDescription a {
+      color: #4cccd5;
+      text-decoration: none;
+      font-weight: bold; }
+      #team .container .teamDescription a:hover {
+        color: #f1e139; }
   #team .container .teamImages {
     display: flex;
     flex-direction: row;
@@ -972,22 +988,5 @@ footer {
       margin-left: 0px; }
     footer a:hover {
       color: #4cccd5; }
-
-.hideMe {
-  display: none; }
-
-@media (min-width: 960px) {
-  .menuBottom {
-    border-bottom: solid 5px #4cccd5 !important; } }
-
-.fadeOut-right {
-  opacity: 0;
-  transform: translateX(30px);
-  overflow: hidden; }
-
-.fadeIn-left {
-  opacity: 1;
-  transform: translateX(0px);
-  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */

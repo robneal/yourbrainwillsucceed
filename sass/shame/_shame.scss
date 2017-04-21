@@ -1,16 +1,6 @@
-// _base.scss
+// _shame.scss
 // ---------------------------------------------------------------------------//
 
-body {
- 	background-color:white;
-  	font-family: $mainFont;
-  	font-size: 1.1em;
-  	line-height: 1.6;
-	color: $ltBlack;
-	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased;
-
-}
 
 .containerWrapper{
 	padding: 90px 0px; 
@@ -25,7 +15,6 @@ body {
 		padding: 0px 2.5em;  
 	}
 }
-
 
 header{
 	background-color:$dumontDKBlueFaded;
@@ -221,16 +210,6 @@ header{
 			}
 		}
 	}
-
-
-
-	// .openHBMenu, .closeHbmX{
-	//     max-height: 30px;
- //    	max-width: 30px;
-	//     position: absolute;
-	//     top: 20px;
-	//     right: 25px;
-	// }
 }
 
 #visualLead{// Container Wrapper
@@ -512,10 +491,19 @@ header{
 		    margin: 15px auto 30px auto;
 		    border: solid 3px white;
 		}
-		p{
+		.teamDescription{
 			text-align: center; 
 			font-weight: lighter;
-			margin-bottom:20px; 
+			margin-bottom:20px;
+
+			a{
+				color:$dumontLtBlue;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover{
+					color: $dumontYellow;
+				}
+			} 
 		}
 
 		.teamImages{
@@ -753,4 +741,18 @@ footer{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
