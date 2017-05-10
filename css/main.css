@@ -628,7 +628,7 @@ header {
 
 #visualLead {
   background-color: #1f3039;
-  background: url(../img/road2.jpg) no-repeat center center fixed;
+  background: url(../img/road.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -658,11 +658,19 @@ header {
         margin: 0 auto; } }
     #visualLead .container h2 {
       text-align: center;
-      font-size: 1.6em;
-      padding: 0px; }
+      font-size: 2.5em;
+      padding: 0px;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
+      @media (min-width: 960px) {
+        #visualLead .container h2 {
+          font-size: 3.5em; } }
     #visualLead .container p {
       text-align: center;
-      margin: 0px auto; }
+      margin: 0px auto;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
+      @media (min-width: 960px) {
+        #visualLead .container p {
+          font-size: 1.5em; } }
     #visualLead .container .downArrow {
       font-size: 2em;
       text-decoration: none;
@@ -672,58 +680,61 @@ header {
       #visualLead .container .downArrow:hover {
         color: #4cccd5; }
 
-.story .container, .bookStory .container {
+.story .container, .bookStory .container, .blog-page .container {
   overflow: hidden; }
-  .story .container h2, .bookStory .container h2 {
+  .story .container h2, .bookStory .container h2, .blog-page .container h2 {
     font-size: 2.5em;
     text-align: center;
     padding: 0 0 0px 0; }
-  .story .container .shortSeperator, .bookStory .container .shortSeperator {
+  .story .container .shortSeperator, .bookStory .container .shortSeperator, .blog-page .container .shortSeperator {
     width: 90px;
     margin: 15px auto 30px auto;
     border: solid 3px black; }
-  .story .container video, .bookStory .container video {
+  .story .container video, .bookStory .container video, .blog-page .container video {
     width: 100%;
     display: block;
     margin: 45px auto; }
     @media (min-width: 600px) {
-      .story .container video, .bookStory .container video {
+      .story .container video, .bookStory .container video, .blog-page .container video {
         width: 70%; } }
-  .story .container .introText, .bookStory .container .introText {
+  .story .container .introText, .bookStory .container .introText, .blog-page .container .introText {
     text-align: center;
     font-weight: lighter;
     justify-content: center;
-    font-size: 1.1em; }
-  .story .container .thinSeperator, .bookStory .container .thinSeperator {
+    font-size: 1em; }
+    @media (min-width: 960px) {
+      .story .container .introText, .bookStory .container .introText, .blog-page .container .introText {
+        font-size: 1.2em; } }
+  .story .container .thinSeperator, .bookStory .container .thinSeperator, .blog-page .container .thinSeperator {
     border: 0;
     border-top: 1px solid #eeeeee;
     margin: 30px auto; }
-  .story .container .fadeInSection, .bookStory .container .fadeInSection {
+  .story .container .fadeInSection, .bookStory .container .fadeInSection, .blog-page .container .fadeInSection {
     position: relative;
     transition: all 0.7s ease-in-out;
     overflow: hidden; }
     @media (min-width: 960px) {
-      .story .container .fadeInSection, .bookStory .container .fadeInSection {
+      .story .container .fadeInSection, .bookStory .container .fadeInSection, .blog-page .container .fadeInSection {
         display: flex;
         flex-wrap: wrap; } }
-    .story .container .fadeInSection h3, .bookStory .container .fadeInSection h3 {
+    .story .container .fadeInSection h3, .bookStory .container .fadeInSection h3, .blog-page .container .fadeInSection h3 {
       font-size: 2em;
       text-align: center;
       color: black; }
       @media (min-width: 960px) {
-        .story .container .fadeInSection h3, .bookStory .container .fadeInSection h3 {
+        .story .container .fadeInSection h3, .bookStory .container .fadeInSection h3, .blog-page .container .fadeInSection h3 {
           flex-basis: 100%;
           text-align: center;
-          font-size: 8.5em;
+          font-size: 5em;
           -webkit-font-smoothing: antialiased; } }
-    .story .container .fadeInSection article, .bookStory .container .fadeInSection article {
+    .story .container .fadeInSection article, .bookStory .container .fadeInSection article, .blog-page .container .fadeInSection article {
       padding: 10px;
       margin: 10px 0;
       text-align: center; }
       @media (min-width: 960px) {
-        .story .container .fadeInSection article, .bookStory .container .fadeInSection article {
+        .story .container .fadeInSection article, .bookStory .container .fadeInSection article, .blog-page .container .fadeInSection article {
           width: 50%; } }
-      .story .container .fadeInSection article .storyIcon, .bookStory .container .fadeInSection article .storyIcon {
+      .story .container .fadeInSection article .storyIcon, .bookStory .container .fadeInSection article .storyIcon, .blog-page .container .fadeInSection article .storyIcon {
         position: relative;
         display: block;
         margin: 0 auto 0;
@@ -731,33 +742,38 @@ header {
         height: 95px;
         background-position: 50% 50%;
         background-repeat: no-repeat; }
-      .story .container .fadeInSection article .hope1, .bookStory .container .fadeInSection article .hope1 {
+      .story .container .fadeInSection article .hope1, .bookStory .container .fadeInSection article .hope1, .blog-page .container .fadeInSection article .hope1 {
         background-image: url("../img/icons/sampleIcon.svg"); }
-      .story .container .fadeInSection article h5, .bookStory .container .fadeInSection article h5 {
+      .story .container .fadeInSection article h5, .bookStory .container .fadeInSection article h5, .blog-page .container .fadeInSection article h5 {
         text-align: center;
         font-size: 0.9em;
         text-transform: uppercase;
         margin: 10px auto 5px auto; }
-      .story .container .fadeInSection article p, .bookStory .container .fadeInSection article p {
+      .story .container .fadeInSection article p, .bookStory .container .fadeInSection article p, .blog-page .container .fadeInSection article p {
         text-align: center;
         font-size: 0.8em;
         padding: 0 20px;
         color: #848484;
         max-width: 320px;
         margin: 0 auto; }
-  .story .container button, .bookStory .container button {
-    padding: 10px 45px;
-    border: solid 3px #1f3039;
-    background: #1f3039;
-    color: white;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: block;
-    margin: 25px auto 10px auto;
-    transition: color , background 0.6s; }
-    .story .container button:hover, .story .container button:focus, .bookStory .container button:hover, .bookStory .container button:focus {
-      color: #1f3039;
-      background: white; }
+  .story .container a, .bookStory .container a, .blog-page .container a {
+    text-decoration: none;
+    color: white; }
+    .story .container a:hover, .story .container a:visited, .bookStory .container a:hover, .bookStory .container a:visited, .blog-page .container a:hover, .blog-page .container a:visited {
+      text-decoration: none; }
+    .story .container a button, .bookStory .container a button, .blog-page .container a button {
+      padding: 10px 45px;
+      border: solid 3px #1f3039;
+      background: #1f3039;
+      color: white;
+      border-radius: 10px;
+      margin: 0 auto;
+      display: block;
+      margin: 25px auto 10px auto;
+      transition: color , background 0.6s; }
+      .story .container a button:hover, .story .container a button:focus, .bookStory .container a button:hover, .bookStory .container a button:focus, .blog-page .container a button:hover, .blog-page .container a button:focus {
+        color: #1f3039;
+        background: white; }
 
 .bookStory .bookImage {
   width: 240px;
@@ -787,6 +803,64 @@ header {
     margin: 0 auto;
     padding: 0;
     font-weight: bold; }
+
+.blogs-posts {
+  display: flex;
+  flex-wrap: wrap; }
+  .blogs-posts--single {
+    color: black; }
+    .blogs-posts--single__link {
+      text-decoration: none;
+      color: #4cccd5 !important;
+      text-transform: uppercase; }
+    .blogs-posts--single__title {
+      border-bottom: solid 1px #eeeeee;
+      padding-bottom: 25px;
+      margin: 15px auto;
+      font-size: 1.5em;
+      text-transform: uppercase; }
+      @media (min-width: 960px) {
+        .blogs-posts--single__title {
+          font-size: 2em; } }
+    .blogs-posts--single__text {
+      font-weight: lighter; }
+  .blogs-posts__excerpts {
+    border: solid 1px #eeeeee;
+    padding: 2rem 3.5rem;
+    margin: 30px auto;
+    background-color: #1f3039;
+    color: white;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    max-width: 300px; }
+    .blogs-posts__excerpts__title {
+      border-bottom: solid 1px;
+      padding-bottom: 25px;
+      margin-bottom: 15px;
+      font-size: 1em;
+      text-transform: uppercase; }
+      @media (min-width: 960px) {
+        .blogs-posts__excerpts__title {
+          font-size: 1.2em; } }
+    .blogs-posts__excerpts__text {
+      font-size: 0.7em;
+      padding: 15px 0; }
+      @media (min-width: 960px) {
+        .blogs-posts__excerpts__text {
+          font-size: 0.8em; } }
+    .blogs-posts__excerpts__link {
+      color: #f1e139;
+      text-decoration: none; }
+    .blogs-posts__excerpts:hover, .blogs-posts__excerpts:active {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.05);
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+      z-index: 2; }
 
 #team {
   background-color: #1f3039;
@@ -971,6 +1045,19 @@ header {
       @media screen and (min-width: 560px) {
         #contact .container .directions iframe {
           flex-basis: 50%; } }
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .social__link {
+    text-decoration: none; }
+    .social__link__image {
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      margin: 30px; }
 
 footer {
   background-color: #1f3039;
