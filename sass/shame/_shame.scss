@@ -212,7 +212,7 @@ header{
 	}
 }
 
-#visualLead{// Container Wrapper
+.visualLead{// Container Wrapper
 	background-color: $dumontDkBlue;
 	
 	//background: url(../img/road.jpg) no-repeat 50% center fixed;
@@ -325,11 +325,13 @@ header{
 		    margin: 15px auto 30px auto;
 		    border: solid 3px black;
 		}
-		video{
+		//video,
+		.lead-video{
 			width:100%;
 			display:block;
 			margin:45px auto;
-			@media (min-width: 600px){
+			height: 320px; 
+			@media (min-width: 720px){
 				width:70%; 
 			} 
 

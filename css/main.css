@@ -626,7 +626,7 @@ header {
             header nav .mainMenu a:hover:last-child {
               border-bottom: none; } }
 
-#visualLead {
+.visualLead {
   background-color: #1f3039;
   background: url(../img/road.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -643,9 +643,9 @@ header {
   padding: 0;
   margin: 60px auto; }
   @media (min-width: 960px) {
-    #visualLead {
+    .visualLead {
       margin: 60px auto; } }
-  #visualLead .container {
+  .visualLead .container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -653,31 +653,31 @@ header {
     padding: 0;
     text-align: center; }
     @media (min-width: 960px) {
-      #visualLead .container {
+      .visualLead .container {
         width: 90%;
         margin: 0 auto; } }
-    #visualLead .container h2 {
+    .visualLead .container h2 {
       text-align: center;
       font-size: 2.5em;
       padding: 0px;
       text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
       @media (min-width: 960px) {
-        #visualLead .container h2 {
+        .visualLead .container h2 {
           font-size: 3.5em; } }
-    #visualLead .container p {
+    .visualLead .container p {
       text-align: center;
       margin: 0px auto;
       text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
       @media (min-width: 960px) {
-        #visualLead .container p {
+        .visualLead .container p {
           font-size: 1.5em; } }
-    #visualLead .container .downArrow {
+    .visualLead .container .downArrow {
       font-size: 2em;
       text-decoration: none;
       text-align: center;
       display: block;
       color: white; }
-      #visualLead .container .downArrow:hover {
+      .visualLead .container .downArrow:hover {
         color: #4cccd5; }
 
 .story .container, .bookStory .container, .blog-page .container {
@@ -690,12 +690,13 @@ header {
     width: 90px;
     margin: 15px auto 30px auto;
     border: solid 3px black; }
-  .story .container video, .bookStory .container video, .blog-page .container video {
+  .story .container .lead-video, .bookStory .container .lead-video, .blog-page .container .lead-video {
     width: 100%;
     display: block;
-    margin: 45px auto; }
-    @media (min-width: 600px) {
-      .story .container video, .bookStory .container video, .blog-page .container video {
+    margin: 45px auto;
+    height: 320px; }
+    @media (min-width: 720px) {
+      .story .container .lead-video, .bookStory .container .lead-video, .blog-page .container .lead-video {
         width: 70%; } }
   .story .container .introText, .bookStory .container .introText, .blog-page .container .introText {
     text-align: center;
